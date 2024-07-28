@@ -1,0 +1,122 @@
+@import "variable";
+
+.edit-post-layout__content[data-site_layout="none"] .wp-block[data-align="full"],
+.edit-post-layout__content[data-site_layout="none"] .wp-block[data-align="wide"],
+.edit-post-layout__content[data-site_layout="none"] .wp-block{
+  max-width: 1170px;
+}
+
+
+.editor-block-list__layout .editor-block-list__block[data-align="full"] {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 600px) {
+  .editor-block-list__layout .editor-block-list__block[data-align=full]>.editor-block-list__block-edit {
+    margin-left: -28px;
+    margin-right: -28px;
+  }
+}
+
+.editor-styles-wrapper {
+  @import "blocks";
+  .components-icon-button {
+    overflow: hidden;
+  }
+
+}
+
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link {
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff !important;
+    background-color: @heading_color !important;
+  }
+
+  &.has-background,
+  &.has-text-color {
+    border-color: transparent !important;
+  }
+}
+
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+  &:hover,
+  &:focus,
+  &:active {
+    color: @accent_color !important;
+  }
+
+  &:not(.has-text-color) {
+    &:hover,
+    &:focus,
+    &:active {
+      color: @heading_color !important;
+      border-color: @heading_color !important;
+    }
+  }
+}
+
+
+.wp-block-freeform.wp-block-freeform.block-library-rich-text__tinymce a {
+  color: @text_color;
+  &:hover,
+  &:focus {
+    color: @accent_color;
+  }
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce blockquote {
+  border: none;
+  padding: 30px 50px 32px 50px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+
+.editor-styles-wrapper.editor-styles-wrapper {
+  font-family: @body_font;
+  font-size: @body_font_size;
+  font-weight: @body_font_weight;
+}
+
+.editor-styles-wrapper.editor-styles-wrapper h1 {
+  font-family: @h1_font;
+  font-size: @h1_font_size;
+  font-weight: @h1_font_weight;
+}
+
+.editor-styles-wrapper.editor-styles-wrapper h2 {
+  font-family: @h2_font;
+  font-size: @h2_font_size;
+  font-weight: @h2_font_weight;
+}
+
+.editor-styles-wrapper.editor-styles-wrapper h3 {
+  font-family: @h3_font;
+  font-size: @h3_font_size;
+  font-weight: @h3_font_weight;
+}
+
+.editor-styles-wrapper.editor-styles-wrapper h4 {
+  font-family: @h4_font;
+  font-size: @h4_font_size;
+  font-weight: @h4_font_weight;
+}
+
+.editor-styles-wrapper.editor-styles-wrapper h5 {
+  font-family: @h5_font;
+  font-size: @h5_font_size;
+  font-weight: @h5_font_weight;
+}
+
+.editor-styles-wrapper.editor-styles-wrapper h6 {
+  font-family: @h6_font;
+  font-size: @h6_font_size;
+  font-weight: @h6_font_weight;
+}

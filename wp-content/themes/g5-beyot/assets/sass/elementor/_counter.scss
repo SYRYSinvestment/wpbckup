@@ -1,0 +1,58 @@
+.ube-counter {
+	.card-title {
+		color: var(--g5-color-heading);
+	}
+
+	.ube-counter-number {
+		font-size: 46px;
+		font-weight: bold;
+		line-height: 1;
+	}
+
+	.card-text {
+		margin-top: 3px;
+		font-size: 16px;
+		font-weight: 600;
+		color: var(--g5-text-color-lighten);
+	}
+
+	&.ube-counter-media-left {
+		.card-body {
+			@include align-items-center();
+		}
+
+		.card-image {
+			margin-right: 10px;
+		}
+	}
+
+	.ube-counter-icon {
+		color: var(--g5-color-accent);
+		font-size: 46px;
+	}
+
+	&.ube-counter-media-right {
+		.card-title {
+			order: -1;
+		}
+
+		.card-body {
+			order: inherit;
+			@include align-items-center();
+		}
+	}
+
+	.card-body {
+		order: inherit;
+		@include align-items-center();
+	}
+
+	&.ube-counter-number-top .card-title {
+		margin-bottom: 0;
+	}
+
+	&:not(.ube-counter-media-top) .card-box {
+		@include d-flex();
+		@include align-items-baseline();
+	}
+}

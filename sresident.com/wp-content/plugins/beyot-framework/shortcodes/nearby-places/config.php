@@ -1,0 +1,181 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: trungpq
+ * Date: 25/05/2017
+ * Time: 10:52 AM
+ */
+return array(
+    'name' => esc_html__('Nearby Places', 'beyot-framework'),
+    'base' => 'g5plus_nearby_places',
+    'icon' => 'fa fa-map-marker',
+    'category' => GF_SHORTCODE_CATEGORY,
+    'params' => array_merge(
+        array(
+            array(
+                'type' => 'textfield',
+                'heading' => esc_html__('Latitude', 'beyot-framework'),
+                'param_name' => 'lat',
+                'value' => '',
+                'admin_label' => true,
+                'edit_field_class' => 'vc_col-sm-6 vc_column'
+            ),
+            array(
+                'type' => 'textfield',
+                'heading' => esc_html__('Longitude', 'beyot-framework'),
+                'param_name' => 'lng',
+                'value' => '',
+                'admin_label' => true,
+                'edit_field_class' => 'vc_col-sm-6 vc_column'
+            ),
+            array(
+                'type' => 'dropdown',
+                'heading' => esc_html__('Rank by', 'beyot-framework'),
+                'param_name' => 'nearby_places_rank_by',
+                'value' => array(
+                    esc_html__('Prominence', 'beyot-framework') => 'default',
+                    esc_html__('Distance', 'beyot-framework') => 'distance'
+                ),
+                'edit_field_class' => 'vc_col-sm-6 vc_column',
+            ),
+            array(
+                'type' => 'textfield',
+                'heading' => esc_html__('Radius', 'beyot-framework'),
+                'param_name' => 'nearby_places_radius',
+                'value' => '5000',
+                'dependency' => array('element' => 'nearby_places_rank_by', 'value' => 'default'),
+                'edit_field_class' => 'vc_col-sm-6 vc_column',
+            ),
+            array(
+                'type' => 'dropdown',
+                'heading' => esc_html__('Near by places distance in', 'beyot-framework'),
+                'param_name' => 'nearby_places_distance_in',
+                'value' => array(
+                    esc_html__('Meter', 'beyot-framework') => 'm',
+                    esc_html__('Km', 'beyot-framework') => 'km',
+                    esc_html__('Mile', 'beyot-framework') => 'mi',
+                ),
+                'std' => 'km',
+                'edit_field_class' => 'vc_col-sm-6 vc_column',
+            ),
+            array(
+                'type' => 'textfield',
+                'heading' => esc_html__('Set Map Height', 'beyot-framework'),
+                'param_name' => 'set_map_height',
+                'value' => '475',
+                'edit_field_class' => 'vc_col-sm-6 vc_column',
+            ),
+            array(
+                'type' => 'param_group',
+                'heading' => esc_html__('Nearby Places Fields', 'beyot-framework'),
+                'param_name' => 'nearby_places_fields',
+                'value' => urlencode(json_encode(array(
+                    array(
+                        'label' => esc_html__('Label Place', 'beyot-framework'),
+                        'value' => '',
+                    ),
+                ))),
+                'params' => array(
+                    array(
+                        'type' => 'dropdown',
+                        'heading' => esc_html__('Type Place', 'beyot-framework'),
+                        'param_name' => 'nearby_places_select_field_type',
+                        'admin_label' => true,
+                        'value' => array(
+                            esc_html__('Accounting', 'beyot-framework') => "accounting",
+                            esc_html__('Airport', 'beyot-framework') => "airport",
+                            esc_html__('Amusement Park', 'beyot-framework') => "amusement_park",
+                            esc_html__('Aquarium', 'beyot-framework') => "aquarium",
+                            esc_html__('Atm', 'beyot-framework') => "atm",
+                            esc_html__('Bakery', 'beyot-framework') => "bakery",
+                            esc_html__('Bank', 'beyot-framework') => "bank",
+                            esc_html__('Bar', 'beyot-framework') => "bar",
+                            esc_html__('Beauty Salon', 'beyot-framework') => "beauty_salon",
+                            esc_html__('Bicycle Store', 'beyot-framework') => "bicycle_store",
+                            esc_html__('Book Store', 'beyot-framework') => "book_store",
+                            esc_html__('Bowling Alley', 'beyot-framework') => "bowling_alley",
+                            esc_html__('Bus Station', 'beyot-framework') => "bus_station",
+                            esc_html__('Cafe', 'beyot-framework') => "cafe",
+                            esc_html__('Campground', 'beyot-framework') => "campground",
+                            esc_html__('Car Rental', 'beyot-framework') => "car_rental",
+                            esc_html__('Car Repair', 'beyot-framework') => "car_repair",
+                            esc_html__('Car Wash', 'beyot-framework') => "car_wash",
+                            esc_html__('Casino', 'beyot-framework') => "casino",
+                            esc_html__('Cemetery', 'beyot-framework') => "cemetery",
+                            esc_html__('Church', 'beyot-framework') => "church",
+                            esc_html__('City Center', 'beyot-framework') => "city_hall",
+                            esc_html__('Clothing Store', 'beyot-framework') => "clothing_store",
+                            esc_html__('Convenience Store', 'beyot-framework') => "convenience_store",
+                            esc_html__('Courthouse', 'beyot-framework') => "courthouse",
+                            esc_html__('Dentist', 'beyot-framework') => "dentist",
+                            esc_html__('Department Store', 'beyot-framework') => "department_store",
+                            esc_html__('Doctor', 'beyot-framework') => "doctor",
+                            esc_html__('Electrician', 'beyot-framework') => "electrician",
+                            esc_html__('Electronics Store', 'beyot-framework') => "electronics_store",
+                            esc_html__('Embassy', 'beyot-framework') => "embassy",
+                            esc_html__('Establishment', 'beyot-framework') => "establishment",
+                            esc_html__('Finance', 'beyot-framework') => "finance",
+                            esc_html__('Fire Station', 'beyot-framework') => "fire_station",
+                            esc_html__('Florist', 'beyot-framework') => "florist",
+                            esc_html__('Food', 'beyot-framework') => "food",
+                            esc_html__('Gas Station', 'beyot-framework') => "gas_station",
+                            esc_html__('Grocery', 'beyot-framework') => "grocery_or_supermarket",
+                            esc_html__('Gym', 'beyot-framework') => "gym",
+                            esc_html__('Hair Care', 'beyot-framework') => "hair_care",
+                            esc_html__('Hardware Store', 'beyot-framework') => "hardware_store",
+                            esc_html__('Health', 'beyot-framework') => "health",
+                            esc_html__('Home Goods Store', 'beyot-framework') => "home_goods_store",
+                            esc_html__('Hospital', 'beyot-framework') => "hospital",
+                            esc_html__('Jewelry Store', 'beyot-framework') => "jewelry_store",
+                            esc_html__('Laundry', 'beyot-framework') => "laundry",
+                            esc_html__('Lawyer', 'beyot-framework') => "lawyer",
+                            esc_html__('Library', 'beyot-framework') => "library",
+                            esc_html__('Lodging', 'beyot-framework') => "lodging",
+                            esc_html__('Movie Theater', 'beyot-framework') => "movie_theater",
+                            esc_html__('Moving Company', 'beyot-framework') => "moving_company",
+                            esc_html__('Night Club', 'beyot-framework') => "night_club",
+                            esc_html__('Park', 'beyot-framework') => "park",
+                            esc_html__('Pharmacy', 'beyot-framework') => "pharmacy",
+                            esc_html__('Place Of Worship', 'beyot-framework') => "place_of_worship",
+                            esc_html__('Plumber', 'beyot-framework') => "plumber",
+                            esc_html__('Police', 'beyot-framework') => "police",
+                            esc_html__('Post Office', 'beyot-framework') => "post_office",
+                            esc_html__('Restaurant', 'beyot-framework') => "restaurant",
+                            esc_html__('School', 'beyot-framework') => "school",
+                            esc_html__('Shopping Mall', 'beyot-framework') => "shopping_mall",
+                            esc_html__('Spa', 'beyot-framework') => "spa",
+                            esc_html__('Stadium', 'beyot-framework') => "stadium",
+                            esc_html__('Storage', 'beyot-framework') => "storage",
+                            esc_html__('Store', 'beyot-framework') => "store",
+                            esc_html__('Subway Station', 'beyot-framework') => "subway_station",
+                            esc_html__('Synagogue', 'beyot-framework') => "synagogue",
+                            esc_html__('Taxi Stand', 'beyot-framework') => "taxi_stand",
+                            esc_html__('Train Station', 'beyot-framework') => "train_station",
+                            esc_html__('Travel Agency', 'beyot-framework') => "travel_agency",
+                            esc_html__('University', 'beyot-framework') => "university",
+                            esc_html__('Veterinary Care', 'beyot-framework') => "veterinary_care",
+                            esc_html__('Zoo', 'beyot-framework') => "zoo",
+                        ),
+                        'std' => 'school'
+                    ),
+                    array(
+                        'type' => 'textfield',
+                        'heading' => esc_html__('Label Place', 'beyot-framework'),
+                        'param_name' => 'nearby_places_field_label',
+                        'value' => 'School'
+                    ),
+                    array(
+                        'type' => 'attach_image',
+                        'heading' => esc_html__('Image Icon Place:', 'beyot-framework'),
+                        'param_name' => 'nearby_places_field_icon',
+                        'value' => '',
+                        'description' => esc_html__('Choose Image Icon Place.', 'beyot-framework'),
+                    ),
+                ),
+            ),
+            gf_vc_map_add_extra_class(),
+            gf_vc_map_add_css_editor()
+        ),
+        gf_vc_map_animation()
+    )
+);

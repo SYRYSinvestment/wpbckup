@@ -1,0 +1,87 @@
+.g5plus-testimonials.layout-center .testimonial-item {
+  text-align: center;
+}
+.g5plus-testimonials.layout-center .testimonial-item img,
+.g5plus-testimonials.layout-center .testimonial-item p,
+.g5plus-testimonials.layout-center .testimonial-item h6:before {
+  margin-left: auto;
+  margin-right: auto;
+}
+.g5plus-testimonials.layout-center .testimonial-item p {
+  font-size: 21px;
+  max-width: 976px;
+}
+.g5plus-testimonials.layout-center .testimonial-item h6 {
+  margin-bottom: 44px;
+}
+.g5plus-testimonials.layout-center .testimonial-item h6:before {
+  content: "";
+  display: block;
+  height: 26px;
+  width: 2px;
+  margin-bottom: 18px;
+}
+.g5plus-testimonials.layout-left .testimonial-item {
+  text-align: left;
+  padding-left: 138px;
+}
+.g5plus-testimonials.layout-left .testimonial-item img {
+  right: auto;
+  left: 0;
+}
+.g5plus-testimonials.layout-left .testimonial-item h6:before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 2px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.g5plus-testimonials.layout-right .testimonial-item {
+  text-align: right;
+  padding-right: 138px;
+}
+.g5plus-testimonials.layout-right .testimonial-item img {
+  right: 0;
+  left: auto;
+}
+.g5plus-testimonials.layout-right .testimonial-item h6:after {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 2px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.g5plus-testimonials.layout-left .testimonial-item,
+.g5plus-testimonials.layout-right .testimonial-item {
+  position: relative;
+}
+.g5plus-testimonials.layout-left .testimonial-item img,
+.g5plus-testimonials.layout-right .testimonial-item img {
+  position: absolute;
+  top: 10px;
+}
+.g5plus-testimonials.layout-left .testimonial-item p,
+.g5plus-testimonials.layout-right .testimonial-item p {
+  margin-bottom: 14px;
+}
+.g5plus-testimonials .testimonial-item img {
+  width: 100px !important;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.g5plus-testimonials .testimonial-item p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.g5plus-testimonials .testimonial-item h6 {
+  font-size: 14px;
+  font-weight: 400;
+}
+.g5plus-testimonials.color-light p {
+  color: #fff;
+}

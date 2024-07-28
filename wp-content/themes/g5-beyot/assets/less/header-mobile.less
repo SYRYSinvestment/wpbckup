@@ -1,0 +1,210 @@
+//==============================================================================
+// Header
+//==============================================================================
+@media screen and (max-width: @responsive_breakpoint) {
+  header.main-header {
+    display: none;
+  }
+
+  header.header-mobile {
+    display: block;
+    height: auto;
+  }
+
+  .top-bar-wrapper {
+    background-color: @top_bar_mobile_bg_color !important;
+    color: @top_bar_mobile_text_color !important;
+    &.full-border {
+      border-bottom: solid 1px @top_bar_mobile_border_color !important;
+    }
+    &.container-border {
+      .top-bar-inner {
+        border-bottom: solid 1px @top_bar_mobile_border_color !important;
+      }
+    }
+    .widget + .widget:before,
+    .menu > li + li:before {
+      border-left: solid 1px;
+      border-left-color: @top_bar_mobile_border_color;
+      border-right-color: @top_bar_mobile_border_color;
+    }
+  }
+
+  .top-bar-inner {
+    padding-top: @top_bar_mobile_padding_top !important;
+    padding-bottom: @top_bar_mobile_padding_bottom !important;
+  }
+
+  .header-mobile-inner {
+    background-color: @header_mobile_bg_color !important;
+    color: @header_mobile_text_color !important;
+    a {
+      color: @header_mobile_text_color;
+      &:hover {
+        color: @accent_color;
+      }
+    }
+    .toggle-icon-wrapper .toggle-icon:after, .toggle-icon-wrapper .toggle-icon:before,
+    .toggle-icon-wrapper .toggle-icon > span {
+      background-color: @header_mobile_text_color !important;
+    }
+    .widget {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .header-mobile-container-inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  .header-mobile-container-inner > div {
+    line-height: 60px !important;
+  }
+  .header-mobile-container-inner .list-group-item
+  {
+    line-height: 30px !important;
+  }
+  .toggle-mobile-menu {
+    float: left;
+  }
+
+  .logo-mobile-wrapper,
+  .mobile-search-button, .mobile-login {
+    float: right;
+  }
+
+  .mobile-login {
+    position: relative;
+    z-index: 1;
+  }
+
+  .mobile-search-button {
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo-mobile-wrapper {
+    position: absolute;
+    padding-left: 100px;
+    padding-right: 100px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    img {
+      max-height: @mobile_logo_max_height;
+      padding-top: @mobile_logo_padding_top;
+      padding-bottom: @mobile_logo_padding_bottom;
+    }
+  }
+
+  .nav-menu-mobile {
+    display: none;
+  }
+
+  .menu-drop-fly {
+    .search-form {
+      padding: 20px;
+      position: relative;
+      background-color: #111;
+      input {
+        width: 100%;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border-color: #333;
+        background-color: #333;
+      }
+      button {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-radius: 0;
+      }
+    }
+    .x-sub-menu-open > a b.x-caret {
+      .transform(rotate(180deg));
+    }
+  }
+
+  .header-mobile-1 {
+    .mobile-search-button {
+      margin-right: 10px;
+    }
+    .mobile-login + .mobile-search-button {
+      margin-right: 20px;
+    }
+  }
+
+  .header-mobile-2 {
+    .toggle-icon-wrapper {
+      float: right;
+      margin-left: 10px;
+    }
+    .logo-mobile-wrapper {
+      text-align: left;
+      padding-left: 0;
+      padding-right: 90px;
+    }
+    .both-mobile-icon {
+      .logo-mobile-wrapper {
+        padding-right: 130px;
+      }
+    }
+    .mobile-search-button {
+      margin-right: 10px;
+    }
+    .mobile-login + .mobile-search-button {
+      margin-right: 20px;
+    }
+
+  }
+
+  .header-mobile-3 {
+    .toggle-icon-wrapper {
+      margin-right: 20px;
+    }
+    .mobile-login, .mobile-search-button {
+      float: left;
+    }
+    .logo-mobile-wrapper {
+      text-align: right;
+      padding-left: 90px;
+      padding-right: 0;
+    }
+    .both-mobile-icon {
+      .logo-mobile-wrapper {
+        padding-left: 130px;
+      }
+    }
+    .mobile-login + .mobile-search-button {
+      margin-left: 10px;
+    }
+  }
+
+  .header-mobile-4 {
+    .both-mobile-icon {
+      .logo-mobile-wrapper {
+        padding-right: 50px;
+      }
+    }
+  }
+
+  .is-sticky {
+    height: 60px;
+    .header-mobile-container-inner > div {
+      line-height: 60px !important;
+    }
+  }
+  .user-dropdown .user-dropdown-menu
+  {
+    left: auto;
+    right: 0;
+  }
+  .header-mobile-wrapper .user-dropdown .user-display-name i {
+    font-size: 20px !important;
+  }
+}

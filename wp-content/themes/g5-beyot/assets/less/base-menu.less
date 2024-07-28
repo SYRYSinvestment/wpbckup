@@ -1,0 +1,120 @@
+.main-menu:not(.x-nav-menu) {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		position: relative;
+		li a {
+			display: block;
+			padding: 5px 0;
+			color: inherit;
+			&:hover {
+				color: @accent_color;
+			}
+		}
+		&:hover > ul {
+			display: block;
+			border-top: solid 1px #eee;
+			-webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.15);
+			-moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.15);
+			box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.15);
+		}
+	}
+	> li {
+		display: inline-block;
+		line-height: 24px;
+		padding-top: (@navigation_height - 24px)/2;
+		padding-bottom: (@navigation_height - 24px)/2;
+
+		+ li {
+			margin-left: 30px;
+		}
+		> a {
+			font-size: 13px;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: #212121;
+		}
+
+		li + li {
+			> a {
+				border-top: solid 1px #ededed;
+			}
+		}
+
+		ul {
+			display: none;
+			position: absolute;
+			list-style: none;
+			padding: 10px 0;
+			margin: 0;
+			background-color: #fff;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			color: #111;
+			z-index: 999;
+			border-bottom: solid 2px @accent_color;
+
+			li {
+				position: relative;
+				min-width: 210px;
+				padding-left: 20px;
+				padding-right: 20px;
+				line-height: 35px;
+			}
+		}
+		&:hover > ul {
+			top: 100%;
+			left: auto;
+		}
+	}
+	> li:last-child {
+		> ul {
+			left: auto;
+			right: 0;
+		}
+
+		li:hover ul {
+			left: auto;
+			right: 100%;
+		}
+	}
+}
+.nav-menu-mobile:not(.x-nav-menu) {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		border-top: solid 1px #313131;
+		position: relative;
+	}
+	a {
+		padding: 10px 20px;
+		display: inline-block;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	ul {
+		display: none;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		background-color: #313131;
+		position: relative;
+		li {
+			border-color: #414141;
+		}
+	}
+	b.menu-caret {
+		position: absolute;
+		right: 20px;
+	}
+	b.menu-caret:before {
+		content: "\f067";
+		font-family: fontawesome;
+		font-size: 10px;
+		font-weight: 400;
+		vertical-align: top;
+	}
+}

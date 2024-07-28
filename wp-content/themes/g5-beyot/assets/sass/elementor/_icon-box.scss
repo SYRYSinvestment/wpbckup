@@ -1,0 +1,31 @@
+.ube-icon-box-wrapper {
+	--ube-ib-color: var(--g5-color-heading);
+	--ube-ib-spacing: 18px;
+
+	&:hover {
+		--ube-ib-color: var(--g5-color-accent);
+	}
+}
+
+.elementor-view-stacked .ube-icon-box {
+	.elementor-icon {
+		padding: 27px;
+		background-image: none !important;
+	}
+}
+
+.ube-icon-box {
+	.elementor-icon {
+		font-size: 28px;
+	}
+}
+
+.ube-ib-title {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.ube-ib-desc {
+	font-size: 12px;
+	font-weight: 400;
+}

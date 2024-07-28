@@ -1,0 +1,36 @@
+.ube-tour{
+	.nav-link{
+		padding-top: 11px;
+		padding-bottom: 11px;
+	}
+	.nav .nav-item{
+		margin-bottom: 2px;
+	}
+	.tab-content .ube-tab-content-container{
+		background-color: #f6f6f6;
+	}
+}
+.ube-tour .nav-link,
+.ube-tour .ube-tabs-card-title {
+	font-size: 18px;
+	font-weight: 500;
+	padding-left: 10px;
+	padding-right: 10px;
+	min-width: 127px
+}
+
+.ube-tour-flat{
+	.nav{
+		padding-bottom: 0;
+	}
+	.nav-link:not(.active),
+	.ube-tabs-card:not(.active) .ube-tabs-card-header{
+		background-color: var(--g5-color-heading);
+		color: var(--g5-color-accent-foreground);
+	}
+	.nav-link.active,
+	.ube-tabs-card.active .ube-tabs-card-header{
+		color: var(--g5-color-accent-foreground);
+		background-color: var(--g5-color-accent);
+	}
+}

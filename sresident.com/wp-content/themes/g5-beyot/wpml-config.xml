@@ -1,0 +1,51 @@
+<wpml-config>
+  <custom-types>
+    <custom-type translate="1">property</custom-type>
+    <custom-type translate="1">agent</custom-type>
+    <custom-type translate="1">package</custom-type>
+    <custom-type translate="1">user_package</custom-type>
+    <custom-type translate="1">invoice</custom-type>
+    <custom-type translate="1">trans_log</custom-type>
+    <custom-type translate="1">gf_preset</custom-type>
+    <custom-type translate="1">gf_footer</custom-type>
+    <custom-type translate="1">vc4_templates</custom-type>
+    <custom-type translate="1">wpcf7_contact_form</custom-type>
+    <custom-type translate="1">vc_grid_item</custom-type>
+    <custom-type translate="1">mc4wp-form</custom-type>
+    <custom-type translate="1">amn_smtp</custom-type>
+  </custom-types>
+  <taxonomies>
+    <taxonomy translate="1">property-type</taxonomy>
+    <taxonomy translate="1">property-status</taxonomy>
+    <taxonomy translate="1">property-feature</taxonomy>
+    <taxonomy translate="1">property-label</taxonomy>
+    <taxonomy translate="1">property-state</taxonomy>
+    <taxonomy translate="1">property-city</taxonomy>
+    <taxonomy translate="1">property-neighborhood</taxonomy>
+    <taxonomy translate="1">agency</taxonomy>
+  </taxonomies>
+  <custom-fields>
+    <custom-field action="translate">_wp_page_template</custom-field>
+    <custom-field action="translate">_edit_lock</custom-field>
+    <custom-field action="translate">_edit_last</custom-field>
+    <custom-field action="translate">_form</custom-field>
+    <custom-field action="translate">_mail</custom-field>
+    <custom-field action="translate">_mail_2</custom-field>
+    <custom-field action="translate">_messages</custom-field>
+    <custom-field action="translate">_additional_settings</custom-field>
+    <custom-field action="translate">_locale</custom-field>
+    <custom-field action="translate">_vc_post_settings</custom-field>
+    <custom-field action="translate">g5plus_format_link_text</custom-field>
+    <custom-field action="translate">g5plus_format_link_url</custom-field>
+    <custom-field action="translate">g5plus_format_quote_content</custom-field>
+    <custom-field action="translate">g5plus_format_quote_author_text</custom-field>
+    <custom-field action="translate">g5plus_format_quote_author_url</custom-field>
+    <custom-field action="translate">g5plus_format_video_embed</custom-field>
+    <custom-field action="translate">g5plus_format_audio_embed</custom-field>
+    <custom-field action="translate">g5plus_format_gallery_images</custom-field>
+    <custom-field action="translate">_wpml_media_duplicate</custom-field>
+    <custom-field action="translate">_wpml_media_featured</custom-field>
+    <custom-field action="translate">_alp_processed</custom-field>
+    <custom-field action="translate">_wpml_location_migration_done</custom-field>
+  </custom-fields>
+</wpml-config>

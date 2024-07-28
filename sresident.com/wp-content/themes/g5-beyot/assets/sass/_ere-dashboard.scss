@@ -1,0 +1,11 @@
+.ere-dashboard-sidebar-content > .navbar {
+	display: block;
+}
+
+@media (max-width: 991px) {
+	.ere-dashboard-sidebar, .ere-dashboard-content {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}

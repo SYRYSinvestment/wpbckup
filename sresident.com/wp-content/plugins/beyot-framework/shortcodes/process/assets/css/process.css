@@ -1,0 +1,43 @@
+.g5plus-process {
+  text-align: center;
+}
+.g5plus-process span {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: block;
+  text-align: center;
+  line-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 32px;
+  font-weight: 600;
+  color: #FFF;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.g5plus-process h2 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 21px;
+  margin-bottom: 31px;
+}
+.g5plus-process h2 a {
+  color: inherit;
+}
+.g5plus-process p {
+  font-size: 12px;
+}
+.g5plus-process.color-light span,
+.g5plus-process.color-light p,
+.g5plus-process.color-light h2 {
+  color: #FFFFFF;
+}
+.g5plus-process:hover span {
+  font-size: 40px;
+}

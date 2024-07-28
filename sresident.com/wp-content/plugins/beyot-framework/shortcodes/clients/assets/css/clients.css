@@ -1,0 +1,67 @@
+.g5plus-clients.owl-carousel .clients-item {
+  padding: 0 15px;
+}
+.g5plus-clients .clients-item {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  padding: 15px;
+}
+.g5plus-clients .clients-item .clients-item-inner {
+  position: relative;
+  height: 160px;
+}
+.g5plus-clients .clients-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  width: inherit !important;
+}
+.g5plus-clients .clients-item:hover {
+  opacity: 1 !important;
+}
+.g5plus-clients .clients-item .bordered {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.g5plus-clients.owl-nav-top-right .owl-nav div {
+  width: 28px;
+  height: 34px;
+  top: -70px;
+}
+.g5plus-clients.owl-nav-top-right .owl-nav div i {
+  line-height: 34px;
+  font-size: 18px;
+}
+.g5plus-clients.owl-nav-top-right .owl-nav .owl-prev {
+  right: 36px;
+  left: auto;
+}
+.g5plus-clients.owl-nav-top-right .owl-nav .owl-prev:after {
+  border-top-width: 34px;
+  border-right-width: 6px;
+}
+.g5plus-clients.owl-nav-top-right .owl-nav .owl-next {
+  right: 0;
+}
+.g5plus-clients.owl-nav-top-right .owl-nav .owl-next:after {
+  border-bottom-width: 34px;
+  border-left-width: 6px;
+}
+@media (max-width: 479px) {
+  .g5plus-clients {
+    margin: auto;
+  }
+}

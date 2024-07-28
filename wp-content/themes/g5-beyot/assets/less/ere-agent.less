@@ -1,0 +1,148 @@
+.beyot-class {
+  //Agent
+  /*-------Agents--------*/
+  div.ere-agent-wrap .ere-agent {
+	h4 a:hover {
+	  color: @accent_color;
+	}
+	&.agent-grid, &.agent-slider {
+	  .agent-social {
+		background: @accent_color;
+		a:hover i {
+		  color: @heading_color;
+		}
+	  }
+	}
+	&.agent-list {
+	  .agent-item {
+		border-bottom-color: @border_color;
+	  }
+	  .agent-social {
+		a {
+		  i {
+			color: @heading_color;
+		  }
+		  &:hover i {
+			color: @accent_color;
+		  }
+		}
+	  }
+	  h4 a {
+		color: @heading_color;
+	  }
+	}
+	&.owl-nav-top-right .owl-nav {
+	  div:hover {
+		background: @accent_color;
+
+	  }
+	  .owl-prev:hover:after {
+		border-top-color: @accent_color;
+	  }
+	  .owl-next:hover:after {
+		border-bottom-color: @accent_color;
+	  }
+	}
+  }
+  .ere-agent.agent-grid .agent-social, .ere-agent.agent-slider .agent-social
+  {
+	background-color: @accent_color;
+  }
+  .ere-agent h4 a:hover
+  {
+	color: @accent_color;
+  }
+  /*------------Archive Agent------------*/
+  div.ere-archive-agent-wrap .archive-agent-action .view-as span.active, .archive-agent-action .view-as span:hover {
+	background: @accent_color !important;
+	&:before {
+	  border-top-color: @accent_color;
+	  border-bottom-color: @accent_color;
+	}
+
+	.above-archive-agent {
+	  .archive-agent-action {
+		.search-box {
+		  button {
+			&:hover {
+			  border-color: @heading_color;
+			  background-color: @heading_color;
+			}
+		  }
+		}
+	  }
+	}
+  }
+
+  /*-------Agents Single--------*/
+  div.ere-agent-single-wrap .agent-single .agent-single-inner .agent-social a,.single-property-area .agent-content .agent-social a {
+	background: @heading_color;
+	&:hover {
+	  background: @accent_color;
+	}
+  }
+  .single-property-area .agent-content .agent-social a:hover
+  {
+	background-color: @accent_color;
+  }
+
+  /* ------------------ Agencies --------------- */
+
+  div.agency-single-info {
+	.agency-social a {
+	  background: @heading_color;
+	  &:hover {
+		background: @accent_color;
+	  }
+	}
+	.agent-contact-btn {
+	  background-color: @heading_color;
+	  border-color: @heading_color;
+	  &:hover {
+		border-color: @accent_color;
+	  }
+	}
+  }
+  div.agency-details-tab {
+	.nav-tabs {
+	  background-color: @heading_color;
+	  li {
+		&.active a,
+		&:hover a {
+		  background-color: @accent_color;
+		}
+	  }
+	}
+  }
+  div.ere-agency {
+	.agency-title,
+	.agency-social {
+	  a {
+		color: @heading_color;
+		&:hover {
+		  color: @accent_color;
+		}
+	  }
+	}
+  }
+
+
+}
+@media (min-width: 768px) {
+  .beyot-class .agency-details-tab:before {
+	position: absolute;
+	z-index: 1;
+	content: '';
+	display: block;
+	background-color: #ededed;
+	left: 50%;
+	width: 10000px;
+	top: 60px;
+	bottom: 0;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+  }
+}

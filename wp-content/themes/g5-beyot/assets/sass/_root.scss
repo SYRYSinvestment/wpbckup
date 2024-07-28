@@ -1,0 +1,123 @@
+:root {
+	--g5-body-font: #{inspect($body_font)};
+	--g5-body-font-size: #{$body_font_size};
+	--g5-body-font-weight: #{$body_font_weight};
+	--g5-secondary-font: #{inspect($font_secondary)};
+	--g5-secondary-font-size: #{$secondary_font_size};
+	--g5-secondary-font-weight: #{$secondary_font_weight};
+
+	--g5-h1-font: #{inspect($h1_font)};
+	--g5-h1-font-size: #{$h1_font_size};
+	--g5-h1-font-weight: #{$h1_font_weight};
+
+	--g5-h2-font: #{inspect($h2_font)};
+	--g5-h2-font-size: #{$h2_font_size};
+	--g5-h2-font-weight: #{$h2_font_weight};
+
+	--g5-h3-font: #{inspect($h3_font)};
+	--g5-h3-font-size: #{$h3_font_size};
+	--g5-h3-font-weight: #{$h3_font_weight};
+
+	--g5-h4-font: #{inspect($h4_font)};
+	--g5-h4-font-size: #{$h4_font_size};
+	--g5-h4-font-weight: #{$h4_font_weight};
+
+	--g5-h5-font: #{inspect($h5_font)};
+	--g5-h5-font-size: #{$h5_font_size};
+	--g5-h5-font-weight: #{$h5_font_weight};
+
+	--g5-h6-font: #{inspect($h6_font)};
+	--g5-h6-font-size: #{$h6_font_size};
+	--g5-h6-font-weight: #{$h6_font_weight};
+
+	--g5-color-accent: #{$color_accent};
+	--g5-color-accent-foreground :  #{$color_accent_foreground};
+
+	--g5-color-accent-lighten: #{lighten($color_accent,10%)};
+	--g5-color-heading-lighten: #{lighten($color_heading,43%)};
+
+	--g5-border-color-dark: #{darken($color_border,6.5%)};
+
+	--g5-color-heading: #{$color_heading};
+	--g5-color-heading-foreground: #{$color_heading_foreground};
+	--g5-color-heading-r :  #{red($color_heading)};
+	--g5-color-heading-g :  #{green($color_heading)};
+	--g5-color-heading-b :  #{blue($color_heading)};
+	--g5-color-text-main: #787878;
+	--g5-color-muted: #ababab;
+	--g5-color-border: #{$color_border};
+
+	--g5-color-link: #{$color_link};
+	--g5-color-link-hover: #{$color_link_hover};
+
+	--g5-header-background-color : #{$header_background_color};
+	--g5-header-border-color : #eee;
+	--g5-header-text-color : #aaaaaa;
+	--g5-top-bar-text-color : #ffffff;
+	--g5-top-bar-border-color : #eee;
+	--g5-top-bar-bg-color: #222222;
+	--g5-top-bar-equal-color: #{$color_accent};
+	--g5-top-drawer-bg-color : #2f2f2f;
+	--g5-top-drawer-text-color : #c5c5c5;
+
+	--g5-mobile-header-border-color : #ededed;
+	--g5-header-responsive-breakpoint: 991px;
+
+	--g5-navigation-bg-color: #fff;
+	--g5-navigation-text-color: #222222;
+	--g5-navigation-text-color-hover: #{$color_accent};
+
+	--g5-top-bar-mobile-bg-color : #fff;
+	--g5-top-bar-mobile-text-color : #111;
+	--g5-top-bar_mobile-border-color : #eee;
+	--g5-header-mobile-bg-color : #fff;
+	--g5-header-mobile-text-color : #111;
+	--g5-header-mobile-border-color : #eee;
+
+	--g5-footer-bg-color : #222222;
+	--g5-footer-text-color : #bababa;
+	--g5-footer-widget-title-color : #ffffff;
+	--g5-footer-border-color : #eee;
+	--g5-bottom-bar-bg-color : #ffffff;
+	--g5-bottom_bar_text_color : #8f8f8f;
+	--g5-bottom-bar-border-color : #eee;
+
+	--g5-top-drawer-padding-top : 0;
+	--g5-top-drawer-padding-bottom : 0;
+	--g5-top-bar-padding-top : 10px;
+	--g5-top-bar-padding-bottom : 10px;
+	--g5-top-bar-mobile-padding-top : 0;
+	--g5-top-bar-mobile-padding-bottom : 0;
+	--g5-header-padding-top : 0;
+	--g5-header-padding-bottom : 0;
+	--g5-navigation-height : 82px;
+	--g5-navigation-spacing : 45px;
+	--g5-header-customize-nav-spacing : 13px;
+	--g5-header-customize-left-spacing : 13px;
+	--g5-header-customize-right-spacing : 13px;
+
+	--g5-footer-padding-top : 60px;
+	--g5-footer-padding-bottom : 60px;
+	--g5-bottom-bar-padding-top : 12px;
+	--g5-bottom-bar-padding-bottom : 12px;
+
+	--g5-logo-max-height : 82px;
+	--g5-mobile-logo-max-height : 50px;
+	--g5-logo-padding-top : 0;
+	--g5-logo-padding-bottom : 0;
+	--g5-mobile-logo-padding-top : 0;
+	--g5-mobile-logo-padding-bottom : 0;
+
+	--g5-text-color-lightness : #bababa;
+	--g5-text-color-lighten : #8f8f8f;
+	--g5-text-color-lightness-02 : #c4c4c4;
+	--g5-x-menu-a-text-hover: #{$color_accent};
+
+	--g5-font-icon: #{inspect($font_icon)};
+
+	--ere-color-accent: var(--g5-color-accent);
+	--ere-color-accent-foreground: var(--g5-color-accent-foreground);
+	--ere-color-heading: var(--g5-color-heading);
+	--ere-color-heading-foreground: var(--g5-color-heading-foreground);
+
+}

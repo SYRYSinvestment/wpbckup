@@ -1,0 +1,47 @@
+.g5plus-countdown{
+    text-align: center;
+    .countdown-section{
+        display: inline-block;
+        margin: 15px;
+        .countdown-amount{
+            font-size: 60px;
+            display: block;
+            height: 122px;
+            width: 134px;
+            line-height: 118px;
+            font-weight: bold;
+        }
+        .countdown-period{
+            display: block;
+            font-size: 14px;
+            color: #fff;
+            font-weight: 400;
+            height: 44px;
+            line-height: 44px;
+        }
+    }
+    &.color-light{
+        .countdown-section{
+            .countdown-amount{
+                color: #fff;
+                border: 2px solid #FFF;
+            }
+            .countdown-period{
+                //color: @heading_color;
+                background-color: #FFF;
+            }
+        }
+    }
+    &.color-dark{
+        .countdown-section{
+           /* .countdown-amount{
+                color: @accent_color;
+                border: 2px solid @accent_color;
+            }*/
+            .countdown-period{
+                color: #FFF;
+                //background-color: @accent_color;
+            }
+        }
+    }
+}

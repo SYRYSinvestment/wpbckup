@@ -1,0 +1,119 @@
+
+# BEGIN Gzipspeedycache
+<IfModule mod_deflate.c>
+	AddType x-font/woff .woff
+	AddType x-font/ttf .ttf
+	AddOutputFilterByType DEFLATE text/js
+	AddOutputFilterByType DEFLATE x-font/ttf
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/rss+xml
+	AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+	AddOutputFilterByType DEFLATE application/x-font
+	AddOutputFilterByType DEFLATE application/x-font-opentype
+	AddOutputFilterByType DEFLATE application/x-font-otf
+	AddOutputFilterByType DEFLATE application/x-font-truetype
+	AddOutputFilterByType DEFLATE application/x-font-ttf
+	AddOutputFilterByType DEFLATE application/x-javascript
+	AddOutputFilterByType DEFLATE application/font-woff2
+	AddOutputFilterByType DEFLATE application/xhtml+xml
+	AddOutputFilterByType DEFLATE application/xml
+	AddOutputFilterByType DEFLATE font/opentype
+	AddOutputFilterByType DEFLATE font/otf
+	AddOutputFilterByType DEFLATE font/ttf
+	AddOutputFilterByType DEFLATE font/woff
+	AddOutputFilterByType DEFLATE font/woff2
+	AddOutputFilterByType DEFLATE image/svg+xml
+	AddOutputFilterByType DEFLATE image/x-icon
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/javascript
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/xml
+</IfModule>
+# END Gzipspeedycache
+
+# BEGIN LBCspeedycache
+<FilesMatch "\.(webm|ogg|mp4|ico|pdf|flv|jpg|jpeg|png|gif|webp|js|css|swf|x-html|css|xml|js|woff|woff2|otf|ttf|svg|eot)(\.gz)?$">
+	<IfModule mod_expires.c>
+		AddType application/font-woff2 .woff2
+		AddType application/x-font-opentype .otf
+		ExpiresActive On
+		ExpiresDefault A0
+		ExpiresByType video/webm A10368000
+		ExpiresByType video/ogg A10368000
+		ExpiresByType video/mp4 A10368000
+		ExpiresByType image/webp A10368000
+		ExpiresByType image/gif A10368000
+		ExpiresByType image/png A10368000
+		ExpiresByType image/jpg A10368000
+		ExpiresByType image/jpeg A10368000
+		ExpiresByType image/ico A10368000
+		ExpiresByType image/svg+xml A10368000
+		ExpiresByType text/css A10368000
+		ExpiresByType text/javascript A10368000
+		ExpiresByType application/javascript A10368000
+		ExpiresByType application/x-javascript A10368000
+		ExpiresByType application/font-woff2 A10368000
+		ExpiresByType application/x-font-opentype A10368000
+		ExpiresByType application/x-font-truetype A10368000
+	</IfModule>
+	<IfModule mod_headers.c>
+		Header set Expires "max-age=A10368000, "
+		Header unset ETag
+		Header set Connection keep-alive
+		FileETag None
+	</IfModule>
+</FilesMatch>
+# END LBCspeedycache
+
+# BEGIN WEBPspeedycache
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{HTTP_ACCEPT} image/webp
+	RewriteCond %{REQUEST_URI} \.(jpe?g|png|gif)
+	RewriteCond %{DOCUMENT_ROOT}/$1.webp -f [or]
+	RewriteCond /home/qsyrtojx/sresident.com/$1.webp -f
+	RewriteRule (?i)(.*)(\.jpe?g|\.png|\.gif)$ /$1.webp [T=image/webp,E=EXISTING:1,L]
+</IfModule>
+<IfModule mod_headers.c>
+	Header append Vary Accept env=REDIRECT_accept
+</IfModule>
+AddType image/webp .webp
+# END WEBPspeedycache
+
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# BEGIN Security Block
+# Block the include-only files.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^wp-admin/includes/ - [F,L]
+RewriteRule !^wp-includes/ - [S=3]
+RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+</IfModule>
+
+# Disable directory listing
+Options All -Indexes
+
+# Remove header with PHP version
+Header always unset X-Powered-By
+Header unset X-Powered-By
+# END Security Block

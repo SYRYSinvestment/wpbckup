@@ -1,0 +1,38 @@
+.g5plus-video {
+  text-align: center;
+}
+.g5plus-video a {
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid #FFFFFF;
+  color: #FFF;
+  width: 100px;
+  height: 100px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.g5plus-video a i {
+  font-size: 45px;
+  line-height: 94px;
+  padding-left: 7px;
+}
+.g5plus-video a:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 768px) {
+  .g5plus-video a {
+    border: 2px solid #FFFFFF;
+    width: 50px;
+    height: 50px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .g5plus-video a i {
+    font-size: 20px;
+    line-height: 46px;
+    padding-left: 2px;
+  }
+}
+
+/*# sourceMappingURL=video.css.map */

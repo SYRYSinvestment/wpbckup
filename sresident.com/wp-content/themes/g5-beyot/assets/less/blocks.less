@@ -1,0 +1,220 @@
+ul.wp-block-gallery {
+  padding: 0;
+}
+
+.wp-block-quote:not(.is-large):not(.is-style-large) {
+  border: none;
+  padding: 30px 50px 32px 50px;
+}
+
+.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+  padding: 30px 50px 32px 50px;
+}
+
+.wp-block-pullquote {
+  margin-bottom: 20px;
+  blockquote:not(.is-large):not(.is-style-large) {
+    padding: 0;
+    background-color: transparent;
+    color: @text_color;
+    margin-bottom: 0;
+    border: none;
+    p {
+      color: inherit;
+    }
+    a {
+      color: inherit;
+    }
+  }
+}
+
+.wp-block-quote cite, .wp-block-quote footer, .wp-block-quote__citation {
+  color: @foreground_accent_color;
+  font-size: 13px !important;
+}
+
+
+.wp-block-table td,
+.wp-block-table th {
+  border: none;
+  padding: 8px;
+  border-top: 1px solid @border_color_dark;
+}
+
+
+.wp-block-button__link {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 11px 19px;
+  border: solid 2px transparent;
+  font-weight: 400;
+  .transition03;
+  .border-radius(0);
+}
+
+.wp-block-button__link:not(.has-background):not(.has-text-color) {
+  color: @foreground_accent_color;
+  background-color: @accent_color;
+  &.active,
+  &:focus,
+  &:hover {
+    color: #fff;
+    background-color: #333;
+  }
+}
+
+.wp-block-button:not(.is-style-squared) .wp-block-button__link{
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link {
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: #333;
+    border-color: #333;
+  }
+
+  &.has-background,
+  &.has-text-color {
+    border-color: transparent;
+  }
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+  background: transparent !important;
+  border: 2px solid currentcolor;
+  &:hover,
+  &:focus,
+  &:active {
+    color: @accent_color;
+  }
+
+  &:not(.has-text-color) {
+    color: @accent_color;
+    &:hover,
+    &:focus,
+    &:active {
+      color: @heading_color;
+      border-color: @heading_color;
+    }
+  }
+}
+
+
+.wp-block-calendar,
+.wp-block-columns,
+.wp-block-group,
+.wp-block-group.has-background,
+.wp-block-search,
+ul.wp-block-categories,
+ul.wp-block-archives,
+.wp-block-archives.wp-block-archives-dropdown,
+ol.wp-block-latest-comments,
+.wp-block-media-text,
+.wp-block-rss,
+.wp-block-latest-posts,
+.wp-block-latest-comments,
+.wp-block-archives,
+.wp-block-categories,
+.wp-block-gallery,
+.wp-block-embed,
+.wp-block-cover-image,
+.wp-block-cover,
+.wp-block-button {
+  margin-bottom: 16px;
+}
+
+
+.wp-block-cover-image,
+.wp-block-cover {
+  color: #f8f9f9;
+  p {
+    margin-bottom: 0;
+    line-height: 1.25;
+  }
+  a {
+    color: inherit;
+  }
+}
+
+
+
+ul.blocks-gallery-grid {
+  margin-bottom: -16px !important;
+  padding-left: 0 !important;
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption,
+.blocks-gallery-grid .blocks-gallery-image figcaption,
+.blocks-gallery-grid .blocks-gallery-item figcaption {
+  color: #fff !important;
+  margin: 0;
+}
+
+.blocks-gallery-caption {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.wp-block-column > *:last-child {
+  margin-bottom: 0;
+}
+
+
+ul.wp-block-rss,
+ul.wp-block-archives-list {
+  list-style: none;
+  padding: 0;
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+ol.wp-block-latest-comments {
+  padding: 0;
+}
+
+
+.wp-block-latest-posts__list {
+  padding: 0 !important;
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+.wp-block-tag-cloud {
+  a {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px !important;
+    line-height: 1;
+    padding: 10px 20px 8px 20px;
+    margin: 0 5px 5px 0;
+    border: solid 1px @border_color;
+    .transition03;
+    &:hover {
+      background-color: @accent_color;
+      border-color: @accent_color;
+      color: @foreground_accent_color !important;
+    }
+  }
+}
+
+ul.wp-block-categories-list {
+  list-style: none;
+  padding: 0;
+  li {
+    margin-bottom: 5px;
+  }
+  ul {
+    margin-top: 5px;
+    list-style: none;
+  }
+}

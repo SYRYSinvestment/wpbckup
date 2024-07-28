@@ -1,0 +1,232 @@
+.g5plus-gallery.col-gap-3.row {
+  margin-left: -1.5px;
+  margin-right: -1.5px;
+}
+.g5plus-gallery.col-gap-3.row .gf-item-wrap {
+  padding-left: 1.5px;
+  padding-right: 1.5px;
+  margin-bottom: 3px;
+}
+.g5plus-gallery.col-gap-0.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.g5plus-gallery.col-gap-0.row .gf-item-wrap {
+  padding-left: 0;
+  padding-right: 0;
+}
+.g5plus-gallery .gf-gallery-item .gf-gallery-inner {
+  position: relative;
+}
+.g5plus-gallery .gf-gallery-item .gf-gallery-inner img {
+  width: 100%;
+  display: block;
+}
+.g5plus-gallery .gf-gallery-item .gf-gallery-inner:before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.g5plus-gallery .gf-gallery-item .gf-gallery-inner a {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 42px;
+  height: 42px;
+  border: 1px solid #fff;
+  opacity: 0;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.g5plus-gallery .gf-gallery-item .gf-gallery-inner a i {
+  color: #fff;
+  line-height: 40px;
+  font-size: 12px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.g5plus-gallery .gf-gallery-item .gf-gallery-inner:hover:before, .g5plus-gallery .gf-gallery-item .gf-gallery-inner:hover a {
+  opacity: 1;
+}
+.g5plus-gallery .gf-gallery-item .gf-gallery-inner:hover a {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+}
+.g5plus-gallery.g5plus-widget-gallery .gf-gallery-item .gf-gallery-inner a {
+  width: 30px;
+  height: 30px;
+}
+.g5plus-gallery.g5plus-widget-gallery .gf-gallery-item .gf-gallery-inner a i {
+  line-height: 28px;
+}
+.g5plus-gallery.overlay-light.suprema-effect .effect-content:before, .g5plus-gallery.overlay-light.suprema-effect .effect-content:after {
+  background-color: var(--g5-color-accent);
+}
+.g5plus-gallery.overlay-light.layla-effect .effect-content:after, .g5plus-gallery.overlay-light.bubba-effect .effect-content:after {
+  border-top-color: var(--g5-color-accent);
+  border-bottom-color: var(--g5-color-accent);
+}
+.g5plus-gallery.overlay-light.layla-effect .effect-content:before, .g5plus-gallery.overlay-light.bubba-effect .effect-content:before {
+  border-left-color: var(--g5-color-accent);
+  border-right-color: var(--g5-color-accent);
+}
+.g5plus-gallery.overlay-light.jazz-effect .effect-content:before {
+  border-top-color: var(--g5-color-accent);
+  border-bottom-color: var(--g5-color-accent);
+}
+
+.suprema-effect, .layla-effect, .bubba-effect, .jazz-effect {
+  overflow: hidden;
+  position: relative;
+}
+.suprema-effect:not(.portfolio-item):after, .layla-effect:not(.portfolio-item):after, .bubba-effect:not(.portfolio-item):after, .jazz-effect:not(.portfolio-item):after {
+  -webkit-transition: opacity 0.8s ease 0.2s;
+  transition: opacity 0.8s ease 0.15s;
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 0;
+}
+.suprema-effect.overlay-light:after, .layla-effect.overlay-light:after, .bubba-effect.overlay-light:after, .jazz-effect.overlay-light:after {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.suprema-effect .effect-content, .layla-effect .effect-content, .bubba-effect .effect-content, .jazz-effect .effect-content {
+  position: relative;
+}
+.suprema-effect .effect-content:before, .suprema-effect .effect-content:after, .layla-effect .effect-content:before, .layla-effect .effect-content:after, .bubba-effect .effect-content:before, .bubba-effect .effect-content:after, .jazz-effect .effect-content:before, .jazz-effect .effect-content:after {
+  position: absolute;
+  content: "";
+  display: block;
+}
+.suprema-effect:hover:after, .suprema-effect:hover .effect-content:before, .suprema-effect:hover .effect-content:after, .layla-effect:hover:after, .layla-effect:hover .effect-content:before, .layla-effect:hover .effect-content:after, .bubba-effect:hover:after, .bubba-effect:hover .effect-content:before, .bubba-effect:hover .effect-content:after, .jazz-effect:hover:after, .jazz-effect:hover .effect-content:before, .jazz-effect:hover .effect-content:after {
+  opacity: 1;
+}
+
+.suprema-effect .effect-content:before, .suprema-effect .effect-content:after {
+  width: 45%;
+  height: 2px;
+  top: 50%;
+  background: #fff;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 0.2s ease, -webkit-transform 0s 0.2s;
+  transition: opacity 0.2s ease, transform 0s 0.2s;
+}
+.suprema-effect .effect-content:before {
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  left: 50%;
+}
+.suprema-effect .effect-content:after {
+  right: 50%;
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.suprema-effect:hover .effect-content:before {
+  transition: opacity 0.3s ease 50ms, transform 2s cubic-bezier(0.26, 0.63, 0, 0.96);
+  -webkit-transform: rotate(-45deg) translateX(-1000px);
+  transform: rotate(-45deg) translateX(-1000px);
+}
+.suprema-effect:hover .effect-content:after {
+  transition: opacity 0.4s ease, transform 2s cubic-bezier(0.26, 0.63, 0, 0.96);
+  -webkit-transform: rotate(-45deg) translateX(1000px);
+  transform: rotate(-45deg) translateX(1000px);
+}
+
+.layla-effect .effect-content:after, .layla-effect .effect-content:before, .bubba-effect .effect-content:after, .bubba-effect .effect-content:before {
+  content: "";
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.layla-effect .effect-content:after, .bubba-effect .effect-content:after {
+  top: 25px;
+  bottom: 25px;
+  left: 50%;
+  right: 50%;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #fff;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #fff;
+}
+.layla-effect .effect-content:before, .bubba-effect .effect-content:before {
+  top: 50%;
+  bottom: 50%;
+  left: 25px;
+  right: 25px;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #fff;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #fff;
+}
+
+.layla-effect:hover .effect-content:after {
+  left: 10px;
+  right: 10px;
+}
+.layla-effect:hover .effect-content:before {
+  top: 10px;
+  bottom: 10px;
+}
+
+.bubba-effect:hover .effect-content:after {
+  left: 25px;
+  right: 25px;
+}
+.bubba-effect:hover .effect-content:before {
+  top: 25px;
+  bottom: 25px;
+}
+
+.jazz-effect .effect-content:before {
+  background-color: transparent;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #fff;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #fff;
+  -webkit-transform: rotate(45deg) scale(0.5);
+  transform: rotate(45deg) scale(0.5);
+}
+.jazz-effect:hover .effect-content:before {
+  -webkit-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+}
+
+/*# sourceMappingURL=gallery.css.map */

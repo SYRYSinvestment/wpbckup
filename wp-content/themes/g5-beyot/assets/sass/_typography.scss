@@ -1,0 +1,163 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	line-height: 1.714;
+	overflow-x: hidden;
+	color: var(--g5-color-text-main);;
+	position: relative;
+	-webkit-font-smoothing: antialiased; //this is very important to make font weight on mac good
+	font-family: var(--g5-body-font);
+	font-size: var(--g5-body-font-size);
+	font-weight: var(--g5-body-font-weight);
+}
+
+h1 {
+	font-family: var(--g5-h1-font);
+	font-size: var(--g5-h1-font-size);
+	font-weight: var(--g5-h1-font-weight);
+}
+
+h2 {
+	font-family: var(--g5-h2-font);
+	font-size: var(--g5-h2-font-size);
+	font-weight: var(--g5-h2-font-weight);
+}
+
+h3 {
+	font-family: var(--g5-h3-font);
+	font-size: var(--g5-h3-font-size);
+	font-weight: var(--g5-h3-font-weight);
+}
+
+h4 {
+	font-family: var(--g5-h4-font);
+	font-size: var(--g5-h4-font-size);
+	font-weight: var(--g5-h4-font-weight);
+}
+
+h5 {
+	font-family: var(--g5-h5-font);
+	font-size: var(--g5-h5-font-size);
+	font-weight: var(--g5-h5-font-weight);
+}
+
+h6 {
+	font-family: var(--g5-h6-font);
+	font-size: var(--g5-h6-font-size);
+	font-weight: var(--g5-h6-font-weight);
+}
+
+hr {
+	margin-top: 20px;
+	border-top: 1px solid var(--g5-color-border);
+	clear: both;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	line-height: 1.2;
+	color: var(--g5-color-heading);
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+p {
+	margin: 0 0 20px 0;
+}
+
+
+a,
+a:focus,
+a:hover {
+	outline: none;
+	text-decoration: none;
+	color: var(--g5-color-text-main);;
+}
+
+a:hover,
+a:focus {
+	color: var(--g5-color-accent);;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+iframe {
+	max-width: 100%;
+}
+
+div, iframe, img {
+	margin: 0;
+	padding: 0;
+}
+
+input, textarea, button, select {
+	outline: none;
+}
+
+::selection {
+	color: var(--g5-color-accent-foreground);;
+	background-color: var(--g5-color-accent);;
+}
+
+::-moz-selection {
+	color: var(--g5-color-accent-foreground);;
+	background-color: var(--g5-color-accent);;
+}
+
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select.form-control,
+select {
+	padding: 0 8px;
+	height: 44px;
+	line-height: 1;
+	background-color: transparent;
+	color: var(--g5-color-text-main);;
+	border: 1px solid var(--g5-color-border);;
+	@include transition(all 0.3s);
+	@include input-placeholder {
+		color: var(--g5-color-text-main);
+	}
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	&:focus {
+		border-color: var(--g5-color-accent);;
+	}
+}
+
+select {
+	height: 44px !important;
+	padding: 0 5px !important;
+	max-width: 100%;
+}
+
+textarea {
+	padding-top: 10px;
+	height: auto;
+}
+
+
+/*
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>");
+	background-repeat: no-repeat;
+	background-position: right 10px top 60%;
+}*/

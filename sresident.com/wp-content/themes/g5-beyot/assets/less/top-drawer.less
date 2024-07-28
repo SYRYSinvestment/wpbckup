@@ -1,0 +1,46 @@
+.top-drawer-wrapper {
+	background-color: @top_drawer_bg_color;
+	color: @top_drawer_text_color;
+	line-height: 2em;
+	position: relative;
+
+	.widget {
+		margin-bottom: 0;
+	}
+	.top-drawer-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: @accent_color;
+		border-top: solid 2px rgba(0,0,0,0.2);
+		padding: 7px;
+		color: #fff;
+		font-size: 10px;
+		line-height: 1;
+		cursor: pointer;
+		opacity: 0.7;
+	}
+	&.in .top-drawer-toggle,
+	&:hover .top-drawer-toggle {
+		opacity: 1;
+	}
+	&.in .top-drawer-toggle {
+		> i:before{
+			content: "\f068";
+		}
+	}
+}
+.top-drawer-inner {
+	padding-top: @top_drawer_padding_top;
+	padding-bottom: @top_drawer_padding_bottom;
+}
+.top-drawer-type-toggle {
+	.top-drawer-inner {
+		display: none;
+	}
+}
+@media screen and (max-width: @responsive_breakpoint){
+	.top-drawer-mobile-invisible {
+		display: none;
+	}
+}

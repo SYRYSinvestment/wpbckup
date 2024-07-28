@@ -1,0 +1,100 @@
+.beyot-class {
+  .wp-social-login-widget {
+	.wp-social-login-connect-with {
+	  color: #bababa;
+	}
+	.wp-social-login-provider-list {
+	  padding: 0;
+	}
+  }
+  .login-transparent {
+	.ere-login-wrap,
+	.ere-register-wrap,
+	.ere-reset-password-wrap {
+	  border: 10px solid rgba(237, 237, 237, .1);
+	  button {
+		border: 2px solid rgba(237, 237, 237, .5);
+		color: #fff;
+		background-color: transparent;
+		&:hover,
+		&:focus,
+		&:active,
+		&:active:focus {
+		  border-color: var(--g5-color-accent);
+		  &.btn-primary {
+			border-color: var(--g5-color-accent);
+			color: #fff;
+			background: var(--g5-color-accent);
+		  }
+		}
+	  }
+	  input:-webkit-autofill {
+		-webkit-transition: background-color 50000s !important;
+		-moz-transition: background-color 50000s !important;
+		-o-transition: background-color 50000s !important;
+		transition: background-color 50000s !important;
+		-webkit-text-fill-color: #bababa;
+	  }
+
+	  form {
+		::-webkit-input-placeholder {
+		  /* Chrome/Opera/Safari */
+		  color: #bababa;
+		}
+		::-moz-placeholder {
+		  /* Firefox 19+ */
+		  color: #bababa;
+		}
+		:-ms-input-placeholder {
+		  /* IE 10+ */
+		  color: #bababa;
+		}
+		:-moz-placeholder {
+		  /* Firefox 18- */
+		  color: #bababa;
+		}
+	  }
+	  .form-group {
+		input:not([type="checkbox"]), select.form-control {
+		  color: #bababa;
+		  border-bottom: 2px solid rgba(237, 237, 237, .2);
+		}
+	  }
+	}
+  }
+
+  /* Login */
+  .ere-login-wrap,
+  .ere-register-wrap,
+  .ere-reset-password-wrap {
+	.btn-primary {
+	  &:hover,
+	  &:focus,
+	  &:active,
+	  &:active:focus {
+		color: var(--g5-color-accent);
+		border-color: var(--g5-color-accent);
+		background-color: #ffffff;
+	  }
+	  background-color: var(--g5-color-accent);
+	  border-color: var(--g5-color-accent);
+	  color: #ffffff;
+	}
+	.ere-reset-password:hover {
+	  color: var(--g5-color-accent);
+	}
+	.form-group {
+	  input:not([type="checkbox"]),
+	  select.form-control {
+		&:hover,
+		&:focus,
+		&:active {
+		  border-bottom-color: var(--g5-color-accent);
+		}
+	  }
+	}
+  }
+  .ere-login-wrap .checkbox:hover {
+	color: var(--g5-color-accent);
+  }
+}

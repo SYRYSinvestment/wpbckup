@@ -1,0 +1,202 @@
+@text_color_lightness:lighten(@text_color, 26%);
+@text_color_lighten:lighten(@text_color, 9%);
+@border_color_dark: darken(@border_color, 6.5%); // #ddd
+
+@header_text_color_light: lighten(@header_text_color, 27%); // #878787
+@header_text_color_dark: darken(@header_text_color, 10%); // #fff -> #e6e6e6
+@header_border_color_dark: darken(@header_border_color, 10%);
+
+@footer_text_color_darken:darken(@footer_text_color, 27%);
+@footer_text_color_lighten:lighten(@footer_text_color, 27%);
+
+.rgba-color ( @color,  @x:0.6) {
+	color: rgba(red(@color), green(@color), blue(@color), @x);
+};
+
+.rgba-bg-color (@color,  @x:0.6) {
+	background-color: rgba(red(@color), green(@color), blue(@color), @x);
+};
+
+.rgba-border (@color,  @x:0.6) {
+	border-color: rgba(red(@color), green(@color), blue(@color), @x);
+};
+
+
+.placeholder(@color:#aaa, @element: 08121991) {
+	.inception (@arguments) when not (@element = 08121991) {
+		@{element}::-webkit-input-placeholder {
+			color: @color;
+		}
+		@{element}:-moz-placeholder {
+			color: @color;
+		}
+		@{element}::-moz-placeholder {
+			color: @color;
+		}
+		@{element}:-ms-input-placeholder {
+			color: @color;
+		}
+	}
+	.inception (@arguments) when (@element = 08121991) {
+		&::-webkit-input-placeholder {
+			color: @color;
+		}
+		&:-moz-placeholder {
+			color: @color;
+		}
+		&::-moz-placeholder {
+			color: @color;
+		}
+		&:-ms-input-placeholder {
+			color: @color;
+		}
+	}
+	.inception(@arguments);
+}
+
+.border-radius(...) {
+	-webkit-border-radius: @arguments;
+	-moz-border-radius: @arguments;
+	border-radius: @arguments;
+}
+
+.border-top-left-radius(...) {
+	-webkit-border-top-left-radius: @arguments;
+	-moz-border-radius-topleft: @arguments;
+	border-top-left-radius: @arguments;
+}
+
+.border-top-right-radius(...) {
+	-webkit-border-top-right-radius: @arguments;
+	-moz-border-radius-topright: @arguments;
+	border-top-right-radius: @arguments;
+}
+
+.border-bottom-left-radius(...) {
+	-webkit-border-bottom-left-radius: @arguments;
+	-moz-border-radius-bottomleft: @arguments;
+	border-bottom-left-radius: @arguments;
+}
+
+.border-bottom-right-radius(...) {
+	-webkit-border-bottom-right-radius: @arguments;
+	-moz-border-radius-bottomright: @arguments;
+	border-bottom-right-radius: @arguments;
+}
+
+.transition(...) {
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	-o-transition: @arguments;
+	transition: @arguments;
+}
+
+.transition-delay(...) {
+	-webkit-transition-delay: @arguments;
+	-moz-transition-delay: @arguments;
+	-o-transition-delay: @arguments;
+	transition-delay: @arguments;
+}
+
+.transition-duration(...) {
+	-webkit-transition-duration: @arguments;
+	-moz-transition-duration: @arguments;
+	-o-transition-duration: @arguments;
+	transition-duration: @arguments;
+}
+
+.transition-property(...) {
+	-webkit-transition-property: @arguments;
+	-moz-transition-property: @arguments;
+	-o-transition-property: @arguments;
+	transition-property: @arguments;
+}
+
+.transition-timing-function(...) {
+	-webkit-transition-timing-function: @arguments;
+	-moz-transition-timing-function: @arguments;
+	-o-transition-timing-function: @arguments;
+	transition-timing-function: @arguments;
+}
+
+.transform(...) {
+	-webkit-transform: @arguments;
+	-moz-transform: @arguments;
+	-o-transform: @arguments;
+	-ms-transform: @arguments;
+	transform: @arguments;
+}
+
+.transform-origin(...) {
+	-webkit-transform-origin: @arguments;
+	-moz-transform-origin: @arguments;
+	-o-transform-origin: @arguments;
+	-ms-transform-origin: @arguments;
+	transform-origin: @arguments;
+}
+
+.transform-style(...) {
+	-webkit-transform-style: @arguments;
+	-moz-transform-style: @arguments;
+	-o-transform-style: @arguments;
+	-ms-transform-style: @arguments;
+	transform-style: @arguments;
+}
+
+.backface-visibility(...) {
+	-webkit-backface-visibility: @arguments;
+	-moz-backface-visibility: @arguments;
+	-o-backface-visibility: @arguments;
+	-ms-backface-visibility: @arguments;
+	backface-visibility: @arguments;
+}
+
+.box-shadow(...) {
+	-webkit-box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	box-shadow: @arguments;
+}
+
+.box-sizing(...) {
+	-webkit-box-sizing: @arguments;
+	-moz-box-sizing: @arguments;
+	box-sizing: @arguments;
+}
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+	background: @color;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, @start), color-stop(1, @stop));
+	background: -ms-linear-gradient(bottom,
+	@start,
+	@stop);
+	background: -moz-linear-gradient(center bottom,
+	@start 0%,
+	@stop 100%);
+	background: -o-linear-gradient(@stop,
+	@start);
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+}
+
+.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
+	background: @color;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(@start,@start,@start)), color-stop(1, rgb(@stop,@stop,@stop)));
+	background: -ms-linear-gradient(bottom, rgb(@start,@start,@start) 0%, rgb(@stop,@stop,@stop) 100%);
+	background: -moz-linear-gradient(center bottom, rgb(@start,@start,@start) 0%, rgb(@stop,@stop,@stop) 100%);
+	background: -o-linear-gradient(rgb(@stop,@stop,@stop), rgb(@start,@start,@start));
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",rgb(@stop,@stop,@stop), rgb(@start,@start,@start)));
+}
+
+.transition03() {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.transition05() {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}

@@ -1,0 +1,235 @@
+/**
+* WordPress Core
+* ----------------------------------------------------------------------------
+*/
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.wp-caption {
+	max-width: 100%; /* Image does not overflow the content area */
+	text-align: center;
+}
+
+.wp-caption.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+	margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+	border: 0 none;
+	height: auto;
+	margin: 0;
+	max-width: 98.5%;
+	padding: 0;
+	width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+	margin: 5px 0 0 0;
+	font-size:12px;
+	line-height: 1.8;
+}
+
+.sticky {
+	opacity: 1;
+}
+
+.bypostauthor {
+	opacity: 1;
+}
+
+/**
+* Gallery
+* ----------------------------------------------------------------------------
+*/
+.gallery {
+	margin: 0 -5px 10px -5px;
+}
+
+.gallery-item {
+	margin: 0 0 10px 0;
+	padding: 0 5px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	max-width: 33.33%;
+	width: 100%;
+}
+
+.gallery-caption {
+	font-size: 12px;
+	line-height: 1.8;
+	margin-top: 5px;
+}
+
+.gallery-icon img {
+	margin: 0 auto;
+	border-radius: 2px;
+	border: 1px solid #eee;
+	padding: 7px;
+	&:hover {
+		border: 1px solid #ccc;
+	}
+}
+
+.gallery-columns-1 .gallery-item {
+	max-width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
+}
+
+/**
+* Typography
+* ----------------------------------------------------------------------------
+*/
+.entry-content {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	hr,
+	dl,
+	blockquote,
+	table,
+	ul,
+	ol,
+	address,
+	pre {
+		margin-bottom: 20px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	hr {
+		margin-top: 20px;
+		border-top: 1px solid @border_color;
+		clear: both;
+	}
+
+	table {
+		width: 100%;
+		border: 1px solid @border_color_dark;
+	}
+	td,
+	th {
+		padding: 8px;
+		border-top: 1px solid @border_color_dark;
+		vertical-align: top;
+	}
+
+	thead th {
+		font-weight: bold;
+		background: #f8f8f8;
+		vertical-align: bottom;
+	}
+
+	thead:first-child > tr:first-child > td,
+	thead:first-child > tr:first-child > th {
+		border-top: none
+	}
+
+	dt,
+	dd {
+		line-height: 2;
+	}
+
+	dd {
+		margin-bottom: 15px;
+	}
+
+	ul,
+	ol {
+		padding-left: 25px;
+	}
+
+	li > ul,
+	li > ol {
+		margin-bottom: 0;
+	}
+
+	address {
+		line-height: 1.8;
+		font-style: italic;
+	}
+}

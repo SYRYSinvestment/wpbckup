@@ -1,0 +1,178 @@
+.beyot-class {
+	//Agent
+	/*-------Agents--------*/
+	div.ere-agent-wrap .ere-agent {
+		h4 a:hover {
+			color: var(--g5-color-accent);
+		}
+
+		&.agent-grid, &.agent-slider {
+			.agent-social {
+				background: var(--g5-color-accent);
+
+				a:hover i {
+					color: var(--g5-color-heading);
+				}
+			}
+		}
+
+		&.agent-list {
+			.agent-item {
+				border-bottom-color: var(--g5-color-border);
+			}
+
+			.agent-social {
+				a {
+					i {
+						color: var(--g5-color-heading);
+					}
+
+					&:hover i {
+						color: var(--g5-color-accent);
+					}
+				}
+			}
+
+			h4 a {
+				color: var(--g5-color-heading);
+			}
+		}
+
+		&.owl-nav-top-right .owl-nav {
+			div:hover {
+				background: var(--g5-color-accent);
+
+			}
+
+			.owl-prev:hover:after {
+				border-top-color: var(--g5-color-accent);
+			}
+
+			.owl-next:hover:after {
+				border-bottom-color: var(--g5-color-accent);
+			}
+		}
+	}
+
+	.ere-agent.agent-grid .agent-social, .ere-agent.agent-slider .agent-social {
+		background-color: var(--g5-color-accent);
+	}
+
+	.ere-agent h4 a:hover {
+		color: var(--g5-color-accent);
+	}
+
+	/*------------Archive Agent------------*/
+	div.ere-archive-agent-wrap .archive-agent-action .view-as span.active, .archive-agent-action .view-as span:hover {
+		background: var(--g5-color-accent) !important;
+
+		&:before {
+			border-top-color: var(--g5-color-accent);
+			border-bottom-color: var(--g5-color-accent);
+		}
+
+		.above-archive-agent {
+			.archive-agent-action {
+				.search-box {
+					button {
+						&:hover {
+							border-color: var(--g5-color-heading);
+							background-color: var(--g5-color-heading);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/*-------Agents Single--------*/
+	div.ere-agent-single-wrap .agent-single .agent-single-inner .agent-social a, .single-property-area .agent-content .agent-social a {
+		background: var(--g5-color-heading);
+
+		&:hover {
+			background: var(--g5-color-accent);
+		}
+	}
+
+	.single-property-area .agent-content .agent-social a:hover {
+		background-color: var(--g5-color-accent);
+	}
+
+	/* ------------------ Agencies --------------- */
+
+	div.agency-single-info {
+		.agency-social a {
+			background: var(--g5-color-heading);
+
+			&:hover {
+				background: var(--g5-color-accent);
+			}
+		}
+
+		.agent-contact-btn {
+			background-color: var(--g5-color-heading);
+			border-color: var(--g5-color-heading);
+
+			&:hover {
+				border-color: var(--g5-color-accent);
+			}
+		}
+	}
+
+
+	div.ere-agency {
+		.agency-title,
+		.agency-social {
+			a {
+				color: var(--g5-color-heading);
+
+				&:hover {
+					color: var(--g5-color-accent);
+				}
+			}
+		}
+	}
+
+
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+	.agency-single-info {
+		.agency-logo {
+			-ms-flex: 0 0 45%;
+			flex: 0 0 45%;
+			max-width: 45%;
+		}
+
+		.agency-content {
+			-ms-flex: 0 0 55%;
+			flex: 0 0 55%;
+			max-width: 55%;
+		}
+
+		.contact-agency {
+			-ms-flex: 0 0 100%;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.beyot-class .agency-details-tab:before {
+		position: absolute;
+		z-index: 1;
+		content: '';
+		display: block;
+		background-color: #ededed;
+		left: 50%;
+		width: 10000px;
+		top: 60px;
+		bottom: 0;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+}

@@ -1,0 +1,1 @@
+ Rica theme framework is a WordPress starter theme based on HTML5 Boilerplate & Bootstrap. <a href="http://www.g5plus.net">Visit site</a>

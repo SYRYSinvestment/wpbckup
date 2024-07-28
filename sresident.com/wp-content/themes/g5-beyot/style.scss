@@ -1,0 +1,117 @@
+/*
+Theme Name:         G5 Beyot
+Theme URI:          http://themes.g5plus.net/beyot/
+Description:        G5 Beyot is the WordPress Theme for real estate seller, buyer, agents and agencies. It has a purpose oriented design and it comes loaded with tons of useful features
+Version:            2.1.6
+Author:             G5Theme
+Author URI:         http://g5plus.net/
+
+License:            GNU General Public License v2 or later
+License URI:        http://www.gnu.org/licenses/gpl-2.0.html
+
+Tags: 				two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: 		g5-beyot
+Domain Path: 		/languages/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Variable
+# Typography
+# Template
+# Widget
+# WP block
+# Header
+# Footer
+# Blog
+# ShortCode
+# Elementor
+# Other
+# Utilities
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Variable
+--------------------------------------------------------------*/
+@import "assets/sass/mixin";
+@import "assets/sass/variables";
+@import "assets/sass/mixin-widget";
+@import "assets/sass/root";
+
+/*--------------------------------------------------------------
+## Typography
+--------------------------------------------------------------*/
+@import "assets/sass/typography";
+.entry-content {
+	@import "assets/sass/base/typography";
+}
+
+
+/*--------------------------------------------------------------
+## Template
+--------------------------------------------------------------*/
+@import "assets/sass/template";
+@import "assets/sass/page-title";
+@import "assets/sass/dialog";
+@import "assets/sass/base-menu";
+@import "assets/sass/menu";
+@import "assets/sass/animation";
+
+
+/*--------------------------------------------------------------
+## Widget
+--------------------------------------------------------------*/
+@import "assets/sass/widget";
+
+
+/*--------------------------------------------------------------
+## WP block
+--------------------------------------------------------------*/
+@import "assets/sass/wp-block";
+.entry-content {
+	@import "assets/sass/base/wp-block";
+}
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+@import "assets/sass/top-drawer.scss";
+@import "assets/sass/header.scss";
+@import "assets/sass/header-mobile";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+@import "assets/sass/footer";
+
+/*--------------------------------------------------------------
+## Blog
+--------------------------------------------------------------*/
+@import "assets/sass/blog";
+
+/*--------------------------------------------------------------
+## ShortCode
+--------------------------------------------------------------*/
+@import "assets/sass/shortcode";
+
+/*--------------------------------------------------------------
+## Elementor
+--------------------------------------------------------------*/
+@import "assets/sass/elementor";
+
+/*--------------------------------------------------------------
+## Other
+--------------------------------------------------------------*/
+@import "assets/sass/custom-bootstrap";
+@import "assets/sass/ere-account";
+@import "assets/sass/ere-agent";
+@import "assets/sass/ere-property";
+@import "assets/sass/dsidx";
+@import "assets/sass/ovr-inf";
+@import "assets/sass/ere-dashboard";
+
+/*--------------------------------------------------------------
+## Utilities
+--------------------------------------------------------------*/
+@import "assets/sass/utilities";
